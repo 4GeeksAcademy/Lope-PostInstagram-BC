@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Photo Feed</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkfK0s4gxOhqg4u2Kq0M41Bq4l8XWUEk7y5Zg+Yrhs1a3wB1G1r6Vx5Wg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <!-- Bootstrap 5.3.3 -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"/>
+
+  <style>
+    body { background-color:#fafafa; }
+    .navbar { border-bottom:1px solid #dbdbdb; }
+    .grid-container { max-width: 950px; margin: 25px auto 50px; }
+    .grid-container img{
+      width:100%; height:100%; object-fit:cover; aspect-ratio:1/1; display:block;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#" aria-label="Inicio Instagram">
+      <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+      <span>Instagram</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+            aria-controls="nav" aria-expanded="false" aria-label="Abrir navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav me-auto"></ul>
+
+      <div class="d-flex align-items-center gap-2">
+        <button id="toggleGrid" class="btn btn-outline-secondary btn-sm"
+                title="Cambiar entre 3 y 1 por fila" aria-label="Cambiar entre 3 y 1 por fila">
+          <i class="fa-solid fa-table-cells" aria-hidden="true"></i>
+          <span class="ms-1">Vista</span>
+        </button>
+
+        <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#createModal"
+                title="Crear una nueva publicación" aria-label="Crear una nueva publicación">
+          Create a new post
+        </button>
+
+        <div class="dropdown">
+          <button class="btn btn-outline-secondary btn-sm dropdown-toggle"
+                  data-bs-toggle="dropdown" title="Abrir ajustes" aria-label="Abrir ajustes">
+            <i class="fa-solid fa-gear" aria-hidden="true"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Saved</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="grid-container container">
+  <div id="feed" class="row row-cols-1 row-cols-md-3 g-1">
+
+    <!-- grana1 -->
+    <div class="col">
+      <img
+        src="https://images.unsplash.com/photo-tqkY4GGnZUs?auto=format&fit=crop&w=1080&h=1080&q=80"
+        alt="grana1" loading="lazy" decoding="async">
+    </div>
+
+    <!-- grana2 -->
+    <div class="col">
+      <img
+        src="https://images.unsplash.com/photo-SRGqzMrE2EI?auto=format&fit=crop&w=1080&h=1080&q=80"
+        alt="grana2" loading="lazy" decoding="async">
+    </div>
+
+    <!-- grana3 -->
+    <div class="col">
+      <img
+        src="https://images.unsplash.com/photo-wYwQF7uxy_Q?auto=format&fit=crop&w=1080&h=1080&q=80"
+        alt="grana3" loading="lazy" decoding="async">
+    </div>
+
+    <!-- grana4 -->
+    <div class="col">
+      <img
+        src="https://images.unsplash.com/photo-JEzwoQVgKU0?auto=format&fit=crop&w=1080&h=1080&q=80"
+        alt="grana4" loading="lazy" decoding="async">
+    </div>
+
+    <!-- grana5 -->
+    <div class="col">
+      <img
+        src="https://images.unsplash.com/photo-GNeydELpos4?auto=format&fit=crop&w=1080&h=1080&q=80"
+        alt="grana5" loading="lazy" decoding="async">
+    </div>
+
+    <!-- grana6 -->
+    <div class="col">
+      <img
+        src="https://images.unsplash.com/photo-l50l0VyoNnQ?auto=format&fit=crop&w=1080&h=1080&q=80"
+        alt="grana6" loading="lazy" decoding="async">
+    </div>
+
+    <!-- grana7 -->
+    <div class="col">
+      <img
+        src="https://images.unsplash.com/photo-91Yn13zMk0U?auto=format&fit=crop&w=1080&h=1080&q=80"
+        alt="grana7" loading="lazy" decoding="async">
+    </div>
+
+    <!-- grana8 -->
+    <div class="col">
+      <img
+        src="https://images.unsplash.com/photo-lwBWgIhLF3k?auto=format&fit=crop&w=1080&h=1080&q=80"
+        alt="grana8" loading="lazy" decoding="async">
+    </div>
+
+    <!-- grana9 -->
+    <div class="col">
+      <img
+        src="https://images.unsplash.com/photo-zkwWkOaefow?auto=format&fit=crop&w=1080&h=1080&q=80"
+        alt="grana9" loading="lazy" decoding="async">
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal crear post -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <form class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create a new post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <label class="form-label" for="caption">Caption</label>
+        <textarea id="caption" class="form-control mb-3" rows="3" placeholder="Write something..."></textarea>
+
+        <label class="form-label" for="imageUrl">Image URL</label>
+        <input id="imageUrl" type="url" class="form-control"
+               placeholder="https://images.unsplash.com/photo-XXXX?auto=format&fit=crop&w=1080&h=1080&q=80"
+               required>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary">Post</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+<script>
+  // Alternar 3 por fila (md) <-> 1 por fila
+  const feed = document.getElementById('feed');
+  document.getElementById('toggleGrid').addEventListener('click', () => {
+    feed.classList.toggle('row-cols-md-3'); // si lo quitas, queda 1 por fila
+  });
+
+  // Añadir post desde el modal (demo)
+  document.querySelector('#createModal form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const url = document.getElementById('imageUrl').value.trim();
+    if (!url) return;
+    const col = document.createElement('div');
+    col.className = 'col';
+    col.innerHTML = `<img src="${url}" alt="newpost" loading="lazy" decoding="async">`;
+    feed.prepend(col);
+    bootstrap.Modal.getInstance(document.getElementById('createModal')).hide();
+    e.target.reset();
+  });
+</script>
+
+</body>
+</html>
+
